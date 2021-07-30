@@ -1,0 +1,96 @@
+@import "colores";
+
+.subtituloProductos {
+    text-align: center;
+}
+.imgProductos {
+    width: 200px;
+    height: 200px; 
+    border: $naranja 3.7px solid;
+    margin: 10px;
+    transition: transform 0.5s;
+    &:hover {
+        transform: scale(1.3);
+    }
+}       
+.enlaceRedSocial {
+    text-decoration: none;
+    color: $rosa;
+    font-weight: 700;
+}
+.productosBudines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerProductosBudines {
+    width: 447px;
+    display: grid;
+    grid-template-areas: 
+    "imgBudines1 imgBudines2"
+    "imgBudines3 imgBudines4";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+.productosGalletitas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerProductosGalletitas {
+    width: 447px;
+    display: grid;
+    grid-template-areas: 
+    "imgGalles1 imgGalles2"
+    "imgGalles3 imgGalles4";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+.productosTortas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerProductosTortas {
+    display: grid;
+    grid-template-areas: 
+    "imgTortas1 imgTortas2"
+    "imgTortas3 imgTortas4";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width:450px) {             
+    .containerProductos {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "tituloProductos"
+        "parrafoProductos"
+        "productosBudines"
+        "productosGalletitas"
+        "productosTortas"
+        "footer";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(7,auto);
+    }
+    .containerProductosBudines {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .containerProductosGalletitas {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .containerProductosTortas {
+        width: cover;
+        display: flex;
+        flex-direction: column;
+    }
+} 

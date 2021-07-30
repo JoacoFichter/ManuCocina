@@ -1,0 +1,78 @@
+@import "colores";
+
+.colImgContacto {
+    align-self: center;
+}
+.imgContacto {
+    width: 100%;
+    position: relative;
+    left: 14px;
+}
+.form-control {
+    margin: 10px;
+    font-size: 1.6rem;
+    color: $celeste;
+}
+.formNombre {
+    padding-right: 100px;
+}
+.btn {
+    margin: 10px;
+    font-size: 1.6rem;
+}
+.btn-primary {
+    color: $blanco;
+    background-color: $celeste;
+    border-color: $naranja;
+    border-width: 2px;
+    border-radius: 10%;
+    font-weight: 500;
+}
+.btn-primary:hover {
+	color: $rosa;
+    background-color: $celeste;
+    border-color: $naranja;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: $celeste;
+    background-color: $rosa;
+    border-color: $naranja;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none; 
+}
+.btn-primary.focus, .btn-primary:focus {
+    color: $celeste;
+    background-color: $rosa;
+    border-color: $naranja;
+    box-shadow: $naranja;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none; 
+}
+.backImgContacto {
+    margin-top: 20px;
+    background-image: url(../assets/img/tortas/pastafrola.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.tituloContacto {
+    color: $celeste;
+    font-weight: 700;
+}
+
+@media only screen and (max-width:991px) {
+    .formContacto {
+        position: relative;
+        right: 10px;
+    }
+    .imgContacto { 
+        padding-bottom: 20px;
+        left:0%;
+    }
+    .formNombre {
+        padding-right: 0%;
+    }
+}

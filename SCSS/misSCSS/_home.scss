@@ -1,0 +1,90 @@
+@import "colores";
+
+.titulosIndex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+.subtituloIndex {
+    align-self: center;
+    text-align: center;
+}
+.seccionIndex {
+    padding: 30px;
+    text-align: justify;
+    position: relative;
+    left: 1%;
+    bottom: 3%;
+}
+.parrafoIndexUno {
+    margin: 30px;
+}
+.imgIndex {
+    width: 75%;
+    align-self: center;
+    justify-self: start;
+    padding: 0px;
+    position: relative;
+    bottom: 6%;
+}
+.pastafrolaIndex {
+    height: 300px;
+    background-image: url(../assets/img/tortas/pastafrola.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.asideIndex {
+    width: 90%;
+    height: 85%;
+    align-self: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $blanco;
+    border: 1px $naranja solid;
+    .tituloAside {
+        color: $rosa;
+        text-align: center;
+        font-size: 2.3rem;
+        text-decoration: underline 3px;
+        padding-top: 30px;   
+    }
+    ul {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;   
+    }
+    .itemAside {
+        color: $celeste;
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
+                                                        /* MOBILE */
+@media only screen and (max-width:991px) {
+    .titulosIndex {
+        flex-direction: column;
+    }
+    .subtituloIndex {
+        text-align: center;
+    }
+    .seccionIndex {
+        position: initial; 
+    }
+    .imgIndex {
+        justify-self: center;
+        position: initial;
+        margin-bottom: 30px;
+        padding-top: 0; 
+    }
+    .asideIndex {
+        width: 60%;
+        top: 0;
+        height: auto;
+        margin-bottom: 40px;
+    }
+} 
+

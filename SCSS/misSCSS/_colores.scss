@@ -1,0 +1,54 @@
+/* inicio uso MAP */
+$colores: (
+      blanco: #EEF4F1,
+      rosa: #EB9CA3,
+      celeste: #2EA5AC,
+      naranja: #FB6D2F,
+      gris: #B8CCD4
+);
+/* cierre uso MAP */
+
+/* inicio variables */
+$blanco: #EEF4F1;
+$rosa: #EB9CA3;
+$celeste: #2EA5AC;
+$naranja: #FB6D2F;
+$gris: #B8CCD4;
+/* cierre variables */
+
+body {
+      background-color: map-get($colores, celeste);
+}
+h2 {
+      color: map-get($colores, rosa);
+}
+.parrafo {
+      color: map-get($colores, blanco);
+}
+.pieDeImagen {
+    color: map-get($colores, gris);
+}
+.tituloPaginas {
+    color: map-get($colores, blanco);
+}
+/*inicio aplicacion IF*/
+$headerBack: blanco;
+.header {                       
+      @if $headerBack == blanco {
+            background-color: $blanco;
+      } @else if $headerBack == rojo {
+            background-color: red;
+     } @else if $headerBack == azul {
+            background-color: blue;
+     } @else {
+            background-color: black;
+      }
+} 
+/* cierre aplicacion IF */
+                
+    
+
+
+
+
+

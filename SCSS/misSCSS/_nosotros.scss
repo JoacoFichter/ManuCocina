@@ -1,0 +1,80 @@
+@import "colores";
+
+.tituloNosotros {
+    margin: 30px;
+}
+.subtituloNosotros2 { 
+    text-align: center;
+}
+.sectionNosotros2 {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.articleNosotros2 {
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.containerImgGalletasChoco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 55px;
+}
+.containerImgBudin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 55px;
+}
+.imgGalletasChoco {
+    width: 55%;
+}
+.parrafoNosotros2 {
+    color: $blanco;
+    font-size: 1.7rem;
+    padding: 15px;
+    text-align: justify;
+}
+.subtituloNosotros3 {
+    text-align: center;
+}
+.sectionNosotros3 {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.articleNosotros3 {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.imgBudin {
+    width: 55%;
+}
+.parrafoNosotros3 {
+    color: $blanco;
+    font-size: 1.7rem;
+    padding: 15px;
+    text-align: justify;
+}
+
+@media only screen and (max-width:991px) {
+    .containerImgBudin {
+        position: initial;
+    }
+    .containerImgGalletasChoco {
+        top: 0%;
+    }
+    .sectionNosotros2 {
+        margin-top: 0;
+    }
+    .sectionNosotros3 {
+        margin-top: 0;
+    }
+}

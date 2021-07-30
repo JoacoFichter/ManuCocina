@@ -1,0 +1,55 @@
+@import "colores";
+
+footer {
+    border-top: $rosa 3px solid;
+    background-image: linear-gradient(to right bottom, $blanco, #B8FCFF);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    ul li {
+        font-size: 2rem;
+        a {
+            padding: 20px;
+            text-decoration: none;
+            color: $rosa;
+        }
+    }
+}
+.linkFooter {
+    &:hover {
+        animation: tada;
+        animation-duration: 1s;
+    }
+    a:hover {
+        text-decoration: none;
+        color: $celeste;
+    }
+}
+.copyright {
+    color: $celeste;
+    font-size: 1.8rem;
+    font-weight: 400; 
+}
+.divLogosRedes img{
+    margin: 2px;
+}
+
+@media only screen and (max-width:767px) {
+    .footerFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .opcionesFooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin: 10px;
+    }
+}
