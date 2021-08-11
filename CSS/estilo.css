@@ -7609,6 +7609,9 @@ h2 {
 .colImgContacto {
   align-self: center; }
 
+.parrafoContacto {
+  padding: 45px; }
+
 .imgContacto {
   width: 100%;
   position: relative;
@@ -7807,6 +7810,10 @@ h2 {
 /* cierre aplicacion IF */
 .subtituloProductos {
   text-align: center; }
+
+.parrafoProductos {
+  padding: 45px;
+  padding-top: 15px; }
 
 .imgProductos {
   width: 200px;
