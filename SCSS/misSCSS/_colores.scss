@@ -19,6 +19,9 @@ $gris: #B8CCD4;
 body {
       background-color: map-get($colores, celeste);
 }
+hr {
+      border-top: 1px solid map-get($colores, blanco);
+}
 h2 {
       color: map-get($colores, rosa);
 }
