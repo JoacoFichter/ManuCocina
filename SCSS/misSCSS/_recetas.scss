@@ -63,15 +63,13 @@
     text-decoration: underline $blanco;
 }
 .recetaPreparacion {
-    grid-area: recetaPreparacion;
     margin: 20px;
     padding: 20px;
 }
-
-.sectionTablaRecetas {
-    grid-area: sectionTablaRecetas;
+.ulIngredientes {
+    margin: 20px;
+    padding: 30px;
 }
-
 .tablaRecetas {
     margin: 20px;
     display: flex;
@@ -83,6 +81,10 @@
     tr th {
         text-decoration: underline;
     } 
+}
+.liIngredientes {
+    display: list-item;
+    list-style: circle;
 }
 .liRecetas {
     display: list-item;
