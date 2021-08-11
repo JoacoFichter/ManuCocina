@@ -65,6 +65,7 @@
 .recetaPreparacion {
     grid-area: recetaPreparacion;
     margin: 20px;
+    padding: 20px;
 }
 
 .sectionTablaRecetas {
@@ -83,7 +84,10 @@
         text-decoration: underline;
     } 
 }
-
+.liRecetas {
+    display: list-item;
+    list-style: auto;
+}
 @media only screen and (max-width:991px) {
     .gridNavRecetas {
         background-color: $rosa;
