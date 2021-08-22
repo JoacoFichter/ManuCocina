@@ -21,18 +21,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 55px;
 }
 .containerImgBudin {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 55px;
 }
 .imgGalletasChoco {
-    width: 55%;
+    width: 370px;
+}
+.imgGallesFlex {
+    display: flex;
+    justify-content: center;
 }
 .parrafoNosotros2 {
     color: $blanco;
@@ -55,7 +55,11 @@
     justify-content: center;
 }
 .imgBudin {
-    width: 55%;
+    width: 370px;
+}
+.imgBudinFlex {
+    display: flex;
+    justify-content: center;
 }
 .parrafoNosotros3 {
     color: $blanco;
