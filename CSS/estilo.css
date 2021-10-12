@@ -155,7 +155,6 @@ h2 {
 .header {
   background-color: #EEF4F1; }
 
-/* cierre aplicacion IF */
 a {
   color: #2EA5AC;
   text-decoration: none;
@@ -7294,7 +7293,6 @@ h2 {
 .header {
   background-color: #EEF4F1; }
 
-/* cierre aplicacion IF */
 html {
   font-size: 62.5%;
   font-family: 'Nunito', sans-serif; }
@@ -7342,7 +7340,6 @@ h2 {
 .header {
   background-color: #EEF4F1; }
 
-/* cierre aplicacion IF */
 .header {
   background-color: #EEF4F1;
   border-bottom: solid 3px #EB9CA3; }
@@ -7426,7 +7423,6 @@ h2 {
 .header {
   background-color: #EEF4F1; }
 
-/* cierre aplicacion IF */
 footer {
   border-top: #EB9CA3 3px solid;
   background-image: linear-gradient(to right bottom, #EEF4F1, #B8FCFF);
@@ -7499,7 +7495,6 @@ h2 {
 .header {
   background-color: #EEF4F1; }
 
-/* cierre aplicacion IF */
 .titulosIndex {
   display: flex;
   flex-direction: row;
@@ -7605,7 +7600,6 @@ h2 {
 .header {
   background-color: #EEF4F1; }
 
-/* cierre aplicacion IF */
 .colImgContacto {
   align-self: center; }
 
@@ -7707,7 +7701,6 @@ h2 {
 .header {
   background-color: #EEF4F1; }
 
-/* cierre aplicacion IF */
 .tituloNosotros {
   margin: 30px; }
 
@@ -7811,7 +7804,6 @@ h2 {
 .header {
   background-color: #EEF4F1; }
 
-/* cierre aplicacion IF */
 .subtituloProductos {
   text-align: center; }
 
@@ -7917,7 +7909,6 @@ h2 {
 .header {
   background-color: #EEF4F1; }
 
-/* cierre aplicacion IF */
 .gridNavRecetas {
   background-color: #EB9CA3;
   border: 3px solid #FB6D2F;
