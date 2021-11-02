@@ -37,6 +37,64 @@ const tortaVainilla = new producto("Torta de Vainilla", 460, 8);
 
 listaProductos.push (gallesChoco, gallesCrackers, gallesAvena, gallesLimon, budinChoco, budinLimon, budinMarmolado, budinVainilla, bizcochuelo, marquise, pastafrola, tortaVainilla);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// DESAFIOS COMPLETADOS 
+
+
 //código para ordenar los productos de menor a mayor precio
 
 let ordenadosPorPrecio = [];
@@ -44,7 +102,7 @@ ordenadosPorPrecio = listaProductos;
 ordenadosPorPrecio.sort(function (a,b) {
     return a.precio - b.precio;
 });
-console.log(ordenadosPorPrecio)
+//console.log(ordenadosPorPrecio)
 
 //declaración de funciones
 
@@ -66,6 +124,6 @@ function seleccionarProductos(dineroDisponible = parseInt(prompt("Cuánto dinero
         alert(`usted puede comprar los siguientes productos: ${producto.nombre}`);
     }
 }
-
+/*
 seleccionarProductos();
-
+*/
