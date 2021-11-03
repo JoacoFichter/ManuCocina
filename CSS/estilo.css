@@ -7227,6 +7227,12 @@ li {
 .flexColumn {
   flex-direction: column; }
 
+.flexWrap {
+  flex-wrap: wrap; }
+
+.flexSpcAround {
+  justify-content: space-around; }
+
 .colFlex--alignCenter {
   align-items: center; }
 
@@ -7263,6 +7269,10 @@ li {
 
 .error404Img {
   margin-top: 50px; }
+
+#btnFiltrar {
+  margin-left: 20px;
+  margin-right: 20px; }
 
 body {
   width: 100%; }
@@ -7313,6 +7323,9 @@ h2 {
   font-size: 35px;
   text-align: center;
   letter-spacing: 2px; }
+
+.textoAFiltrar {
+  font-size: 1.7rem; }
 
 /* inicio uso MAP */
 /* cierre uso MAP */

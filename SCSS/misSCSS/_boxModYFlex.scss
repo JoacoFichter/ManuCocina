@@ -4,6 +4,12 @@
 .flexColumn {
     flex-direction: column;
 }
+.flexWrap {
+    flex-wrap: wrap;
+}
+.flexSpcAround {
+    justify-content: space-around;
+}
 .colFlex--alignCenter {
     align-items: center;
 }
@@ -41,4 +47,8 @@ li {
 }
 .error404Img {
     margin-top: 50px;
+}
+#btnFiltrar {
+    margin-left: 20px;
+    margin-right: 20px;
 }
