@@ -1,4 +1,5 @@
-//declaración de objetos e incorporación de los mismos a Array "listaProductos"
+//declaración de objetos, incorporación de los mismos a Array "listaProductos" y guardado en el localStorage:
+
 class producto {
     constructor(nombre, precio, cantidadEnStock, nombreIMG) {
         this.nombre = nombre;
@@ -34,13 +35,16 @@ const marquise = new producto("Marquise de chocolate", 700, 4, "marquise");
 const pastafrola = new producto("Pastafrola", 550, 2, "pastafrola");
 const tortaVainilla = new producto("Torta de Vainilla", 460, 8, "tortaVainilla");
 
-//incorporación de objetos al array "listaProductos":
-
 listaProductos.push (gallesChoco, gallesCrackers, gallesAvena, gallesLimon, budinChoco, budinLimon, budinMarmolado, budinVainilla, bizcochuelo, marquise, pastafrola, tortaVainilla);
+
+const guardarLocal = (clave, valor) => {localStorage.setItem(clave, valor)};
+guardarLocal("listaProductos", JSON.stringify(listaProductos));
+let datosAlmacenados = JSON.parse(localStorage.getItem("listaProductos"));
+console.log(datosAlmacenados);
 
 //generación de cards a través del uso del DOM:
 
-for (let producto of listaProductos) {
+for (let producto of datosAlmacenados) {
     let flexCards = document.getElementById("flexCards");
     let crearCard = document.createElement("div");
     crearCard.innerHTML = `<div id="${producto.nombre}" class="card" style="height: 350px; width: 18rem; margin: 40px;">
