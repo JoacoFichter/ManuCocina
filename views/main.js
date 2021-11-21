@@ -1,11 +1,11 @@
 //declaración de objetos, incorporación de los mismos a Array "listaProductos":
 
 class producto {
-    constructor(nombre, precio, cantidadEnStock, nombreIMG) {
+    constructor(nombre, precio, cantidadEnStock, id) {
         this.nombre = nombre;
         this.precio = precio;
         this.cantidadEnStock = cantidadEnStock;
-        this.nombreIMG = nombreIMG;
+        this.id = id;
     }
     mostrarPrecio() {
         alert("El precio del producto es de $" + this.precio + " por unidad");
@@ -49,16 +49,31 @@ let datosAlmacenados = JSON.parse(localStorage.getItem("listaProductos"));
 let crearCards = (lista) => {
     for (let producto of lista) {
         $("#flexCards").append(
-                        `<div id="${producto.nombre}" class="card" style="height: 350px; width: 18rem; margin: 40px;">
-                            <img src="../assets/img/${producto.nombreIMG}.jpg" class="card-img-top" alt="${producto.nombre}">
+                        `<div id="${producto.id}" class="card cardBorder" style="height: 350px; width: 18rem; margin: 40px;">
+                            <img src="../assets/img/${producto.id}.jpg" class="card-img-top imgTienda" alt="${producto.nombre}">
                             <div class="card-body">
                                 <h5 class="card-title">${producto.nombre}</h5>
                                 <p>$${producto.precio}</p>
-                                <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                                <button id="${producto.id}Btn" class="btn btn-primary">Añadir al carrito</button>
                             </div>
                             <div id="cantidadEnCarrito"></div>
                         </div>`
         );
+        //Genero evento para agregar productos al array donde irán los productos del carrito:
+        $(`#${producto.id}Btn`).click( () => {
+            listaCarrito.push(producto);
+            console.log(listaCarrito);
+            $("#bodyTablaCarrito").append(`
+                            <tr>
+                                <th scope="row"></th>
+                                <td class="parrafoRosa">${producto.nombre}</td>
+                                <td class="parrafoRosa">${producto.precio}</td>
+                                <td>
+                                    <input type="number" id="cantidad${producto.id}Carrito" value="1">
+                                </td>
+                            </tr>
+            `);
+        })
     }
 }
 
@@ -78,6 +93,22 @@ let filtrarDatos = () => {
 }
 
 $("#btnFiltrar").click(filtrarDatos);
+
+// -------------------- CARRITO --------------------
+
+$("#abrirCarrito").click( () => { 
+    $("#contenedorCarrito").slideDown();
+});
+$("#cerrarCarrito").click( () => { 
+    $("#contenedorCarrito").slideUp(); 
+});
+
+// Creación de array para almacenar productos que van al carrito:
+const listaCarrito = []
+
+
+
+
 
 
 

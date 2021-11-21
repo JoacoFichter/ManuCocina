@@ -18,6 +18,33 @@
 </head>
 <body>
 <div class="Container">
+    <div id="contenedorCarrito" class="row mt-5 mb-5 ml-5 mr-5">
+        <div class="row">
+            <div class="col-lg-3 col-xs-2 contenedorVacio"></div>
+            <div class="col-lg-6 col-xs-8">
+                <div id="carrito">
+                    <div class="row colFlex colFlex--justifyCenter">
+                            <button id="cerrarCarrito" class="btn-primary mt-4 btnCarrito">Esconder Carrito</button>
+                    </div>
+                    <div id="carroACompletar">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Precio x Unidad</th>
+                                <th scope="col">Cantidad</th>
+                            </tr>
+                            </thead>
+                            <tbody id=bodyTablaCarrito>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xs-2 contenedorVacio"></div>
+        </div>
+    </div>
 <!--inicio header-->   
     <div class="row">
         <div class="col-lg-12 col-xs-12">    
@@ -29,7 +56,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item opcionUno">
+                        <li class="nav-item opcionUno"> 
                         <a class="nav-link" href="../../index.html">Home</a>
                         </li>
                         <li class="nav-item opcionDos">
@@ -45,7 +72,18 @@
                         <a class="nav-link" href="../../views/contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item opcionSeis">
-                        <a class="nav-link" href="../../views/carrito.html"><svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="#2EA5AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="carrito feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></a>
+                            <a class="nav-link" href="../../views/tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item opcionSiete">
+                            <button id="abrirCarrito" class="nav-link carritoBtn">
+                                <div class="carrito">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#2EA5AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="carrito feather feather-shopping-cart">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </div>
+                            </button>
                         </li>
                     </ul>
                 </nav>
@@ -126,7 +164,7 @@
             </footer>
             <!--cierre footer-->
         </div>
-    </div>
+    </div> 
 </div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -135,5 +173,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../main.js"></script>
 </body> 
 </html>

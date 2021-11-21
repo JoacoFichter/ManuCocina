@@ -28,6 +28,9 @@ h2 {
 .parrafo {
       color: map-get($colores, blanco);
 }
+.parrafoRosa {
+      color: map-get($colores, rosa);
+}
 .pieDeImagen {
     color: map-get($colores, gris);
 }
