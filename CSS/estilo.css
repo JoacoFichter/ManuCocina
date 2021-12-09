@@ -7579,6 +7579,9 @@ h2 {
   align-self: center;
   text-align: center; }
 
+#subtituloIndex {
+  margin-top: 15px; }
+
 .seccionIndex {
   padding: 30px;
   text-align: justify;
@@ -8203,9 +8206,17 @@ h2 {
 .contenedorVacio {
   width: 100%; }
 
-/*#pruebaD {
-    z-index: 10;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}*/
+.btnEliminarProducto {
+  width: 10px;
+  color: #EEF4F1;
+  background-color: #EB9CA3; }
+
+#totalCarrito {
+  display: none; }
+
+.formCarrito {
+  width: 50%; }
+
+.btnComprarCarrito {
+  width: 100px;
+  background-color: #EB9CA3; }

@@ -27,11 +27,18 @@
 .contenedorVacio {
     width: 100%;
 }
-
-
-/*#pruebaD {
-    z-index: 10;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-}*/
+.btnEliminarProducto {
+    width: 10px;
+    color: $blanco;
+    background-color: $rosa;
+}
+#totalCarrito {
+    display: none;
+}
+.formCarrito {
+    width: 50%;
+}
+.btnComprarCarrito {
+    width: 100px;
+    background-color: $rosa;
+}

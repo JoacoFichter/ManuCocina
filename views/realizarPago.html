@@ -74,7 +74,7 @@
                         <li class="nav-item opcionCinco">
                         <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
-                        <li class="nav-item opcionSeis active">
+                        <li class="nav-item opcionSeis">
                             <a class="nav-link" href="tienda.html">Tienda</a>
                         </li>
                         <li class="nav-item opcionSiete">
@@ -96,21 +96,33 @@
     <!--cierre HEADER-->
     <div class="row">
         <div class="col-lg-12 col-xs-12">
-            <h1 class="tituloPaginas">Tienda de ManuCocina</h1>
-            <h2 class="subtituloIndex">Te llevamos los productos a tu casa...</h2>
+            <h1 class="tituloPaginas">Carrito de Compras</h1>
+            <h2 class="subtituloIndex">Finalizá tu compra ingresando tus datos</h2>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-12 col-xs-12 colFlex colFlex--justifyCenter">
-            <input class="textoAFiltrar lateralMargin inputTexto" type="text" id="textoAFiltrar" placeholder="Qué producto busca?">
-            <input class="button btn-primary btn" type="button" id="btnFiltrar" name="filtrarProductos" value="Filtrar">
+        <div class="col-lg-6 col-xs-12 mt-3">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th class="parrafo" scope="col">#</th>
+                    <th class="parrafo" scope="col">Producto</th>
+                    <th class="parrafo" scope="col">Precio</th>
+                  </tr>
+                </thead>
+                <tbody id="contenedorCompraCarrito">
+                </tbody>
+            </table>
+            <div id="contenedorPrecioFinal"></div>
         </div>
-    </div>
-    <div class="row">
-        <div id="flexCardsPadre" class="col-lg-12 col-xs-12">
-            <div id="flexCards" class="colFlex colFlex--alignCenter colFlex--justifyCenter flexWrap flexSpcAround">
-                </div>
-            </div>
+        <div class="col-lg-6 col-xs-12 d-flex flex-column justify-content-start">
+            <div class="parrafo">Nombre completo</div>
+            <input class="form-control formCarrito" type="text" id="nombreCompletoComprador">
+            <div class="parrafo">Email</div>
+            <input class="form-control formCarrito" type="email" id="emailComprador">
+            <div class="parrafo">Numero de Tarjeta</div>
+            <input class="form-control formCarrito" type="number" id="numeroTarjetaComprador">
+            <button class="btn btn-primary btnComprarCarrito mt-4 mb-5">Comprar</button>
         </div>
     </div>
     <!-- inicio footer-->

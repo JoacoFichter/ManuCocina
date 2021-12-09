@@ -7,7 +7,7 @@ class producto {
         this.cantidadEnStock = cantidadEnStock;
         this.id = id;
     }
-    mostrarPrecio() {
+    /*mostrarPrecio() {
         alert("El precio del producto es de $" + this.precio + " por unidad");
     }
     disponibilidad(cantidadAComprar = prompt("Cuántos " + this.nombre + " desea comprar?")) {
@@ -18,7 +18,7 @@ class producto {
         }else {
             alert("El producto no está disponible");
         }
-    }
+    }*/
 }
 
 const listaProductos = [];
@@ -44,16 +44,51 @@ guardarLocal("listaProductos", JSON.stringify(listaProductos));
 
 let datosAlmacenados = JSON.parse(localStorage.getItem("listaProductos"));
 
-//generación de cards a través de la manipulación del DOM:
+let totalCarrito = 0;
 
+let precioCarrito = () => {
+    $("#totalCarrito").empty();
+    totalCarrito = 0;
+    for (const producto of listaCarrito) {
+        totalCarrito = totalCarrito + producto.precio;
+    }
+    guardarLocal("carritoPrecioFinal", JSON.stringify(totalCarrito));
+    $("#totalCarrito").append(`
+                    <th scope="row">
+                    <td class="parrafoRosa">Total: ${totalCarrito}</td>
+    `)
+}
+
+let functionEliminarProductoCarrito = () => {
+    for (let producto of listaCarrito) {
+        $(`#eliminar${producto.id}`).click( () => {
+            listaCarrito = listaCarrito.filter(a => a.id !== producto.id);
+            $("#bodyTablaCarrito").empty();
+            for (producto of listaCarrito) {
+                $("#bodyTablaCarrito").append(`
+                        <tr id="${producto.id}Row">
+                            <th scope="row"></th>
+                            <td class="parrafoRosa">${producto.nombre}</td>
+                            <td class="parrafoRosa">${producto.precio}</td>
+                            <td><button class="btnEliminarProducto" id="eliminar${producto.id}">X</button></td>
+                        </tr>
+                `);
+            }
+            precioCarrito();
+            functionEliminarProductoCarrito();
+            guardarLocal("listaCarrito", JSON.stringify(listaCarrito));
+        });
+    }
+}
+//generación de cards a través de la manipulación del DOM:
 let crearCards = (lista) => {
     for (let producto of lista) {
         $("#flexCards").append(
                         `<div id="${producto.id}" class="card cardBorder" style="height: 350px; width: 18rem; margin: 40px;">
                             <img src="../assets/img/${producto.id}.jpg" class="card-img-top imgTienda" alt="${producto.nombre}">
                             <div class="card-body">
-                                <h5 class="card-title">${producto.nombre}</h5>
-                                <p>$${producto.precio}</p>
+                                <h5 class="card-title text-center">${producto.nombre}</h5>
+                                <p class="parrafoRosa text-center">$${producto.precio}</p>
                                 <button id="${producto.id}Btn" class="btn btn-primary">Añadir al carrito</button>
                             </div>
                             <div id="cantidadEnCarrito"></div>
@@ -62,21 +97,21 @@ let crearCards = (lista) => {
         //Genero evento para agregar productos al array donde irán los productos del carrito:
         $(`#${producto.id}Btn`).click( () => {
             listaCarrito.push(producto);
-            console.log(listaCarrito);
             $("#bodyTablaCarrito").append(`
-                            <tr>
+                            <tr id="${producto.id}Row">
                                 <th scope="row"></th>
                                 <td class="parrafoRosa">${producto.nombre}</td>
                                 <td class="parrafoRosa">${producto.precio}</td>
-                                <td>
-                                    <input type="number" id="cantidad${producto.id}Carrito" value="1">
-                                </td>
+                                <td><button class="btnEliminarProducto" id="eliminar${producto.id}">X</button></td>
                             </tr>
             `);
+            functionEliminarProductoCarrito();
+            precioCarrito();
+            $("#totalCarrito").show();
+            guardarLocal("listaCarrito", JSON.stringify(listaCarrito));
         })
     }
 }
-
 crearCards(datosAlmacenados);
 
 //variables y funciones para el Filtrado:  (DESAFIO "EVENTOS")
@@ -95,7 +130,6 @@ let filtrarDatos = () => {
 $("#btnFiltrar").click(filtrarDatos);
 
 // -------------------- CARRITO --------------------
-
 $("#abrirCarrito").click( () => { 
     $("#contenedorCarrito").slideDown();
 });
@@ -103,10 +137,38 @@ $("#cerrarCarrito").click( () => {
     $("#contenedorCarrito").slideUp(); 
 });
 
-// Creación de array para almacenar productos que van al carrito:
-const listaCarrito = []
+listaCarrito = JSON.parse(localStorage.getItem("listaCarrito"));
 
+for (producto of listaCarrito) {
+    $("#bodyTablaCarrito").append(`
+            <tr id="${producto.id}Row">
+                <th scope="row"></th>
+                <td class="parrafoRosa">${producto.nombre}</td>
+                <td class="parrafoRosa">${producto.precio}</td>
+                <td><button class="btnEliminarProducto" id="eliminar${producto.id}">X</button></td>
+            </tr>
+    `);
+    functionEliminarProductoCarrito();
+    precioCarrito();
+    $("#totalCarrito").show();
+    guardarLocal("listaCarrito", JSON.stringify(listaCarrito));
+}
 
+//-----------Página de pago de los productos-----------
+
+for(producto of listaCarrito) {
+    $("#contenedorCompraCarrito").append(`
+      <tr>
+        <th scope="row"></th>
+        <td class="parrafo">${producto.nombre}</td>
+        <td class="parrafo">${producto.precio}</td>
+      </tr>
+    `)
+}
+let carritoPrecioFinal = JSON.parse(localStorage.getItem("carritoPrecioFinal"));
+$("#contenedorPrecioFinal").append(`
+    <p class="parrafo">Precio final: ${carritoPrecioFinal}</p>    
+`)
 
 
 
