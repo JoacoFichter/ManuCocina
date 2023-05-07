@@ -139,7 +139,7 @@ $("#cerrarCarrito").click( () => {
 
 listaCarrito = JSON.parse(localStorage.getItem("listaCarrito"));
 
-for (producto of listaCarrito) {
+for (let producto of listaCarrito) {
     $("#bodyTablaCarrito").append(`
             <tr id="${producto.id}Row">
                 <th scope="row"></th>
